@@ -1,103 +1,178 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  IconClock,
+  IconCloud,
+  IconCrown,
+  IconLockOpen,
+  IconMoneybagHeart,
+  IconThumbUpFilled,
+  IconWaveSine,
+} from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="">
+      <Hero />
+
+      <section className="mt-20 mx-auto max-w-6xl w-full  text-center">
+        <h1 className="text-3xl font-bold font-mono text-slate-300">
+          Keep Your Car Shiny, All The Time!
+        </h1>
+        <h2 className="mt-2 text-lg font-sans text-gray-500">
+          Wash As Many Times As You Like At Any of Our Spade Car Wash Locations,
+          Nationwide.
+        </h2>
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              icon: IconLockOpen,
+              title: "Unlimited Washes",
+              description: "Wash as often as you want at any Spade location",
+            },
+            {
+              icon: IconCrown,
+              title: "VIP Access",
+              description:
+                "Experience exclusive care with dedicated lanes to skip the line.",
+            },
+            {
+              icon: IconCloud,
+              title: "Weather-Proof Shine",
+              description:
+                "Wash after rain or dust for a bright finish and choose the Spade Big! wash for fewer clinging bugs.",
+            },
+          ].map(({ icon: Icon, title, description }, index) => (
+            <div
+              key={title}
+              className="flex items-start gap-6 rounded-2xl shadow-sm transition hover:shadow-lg"
+            >
+              <div
+                className={cn(
+                  "flex h-16 w-16 items-center justify-center rounded-full shrink-0",
+                  index % 2 !== 0 ? "bg-purple-500" : "bg-cyan-500"
+                )}
+              >
+                <Icon className="h-7 w-7" />
+              </div>
+              <div className="flex flex-col text-left">
+                <h3 className="text-lg font-semibold text-gray-400">{title}</h3>
+                <p className="mt-1 text-sm text-gray-500">{description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: IconMoneybagHeart,
+              title: "Save More",
+              description: "Wash a second time per month and save money.",
+            },
+            {
+              icon: IconClock,
+              title: "Car Longevity",
+              description: "Washing frequently prolongs the life of your car.",
+            },
+            {
+              icon: IconThumbUpFilled,
+              title: "Safety Assurance",
+              description: "Keep features and cameras clear and clean.",
+            },
+            {
+              icon: IconWaveSine,
+              title: "Flexibility",
+              description: "No long-term commitment.",
+            },
+          ].map(({ icon: Icon, title, description }, index) => (
+            <div
+              key={title}
+              className="flex items-start gap-6 rounded-2xl shadow-sm transition hover:shadow-lg"
+            >
+              <div
+                className={cn(
+                  "flex h-16 w-16 items-center justify-center rounded-full shrink-0",
+                  index % 2 === 0 ? "bg-purple-500" : "bg-cyan-500"
+                )}
+              >
+                <Icon className="h-7 w-7" />
+              </div>
+              <div className="flex flex-col text-left">
+                <h3 className="text-lg font-semibold text-gray-400">{title}</h3>
+                <p className="mt-1 text-sm text-gray-500">{description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-16">
+          <Link
+            href={"/purchase-membership"}
+            className="px-4 py-2 text-lg bg-yellow-500 hover:bg-yellow-700 transform-color duration-500 rounded-2xl"
+          >
+            Puchase a membership
+          </Link>
+        </div>
+      </section>
+
+      <section className="relative mt-24 w-full h-32 md:h-52 overflow-hidden bg-cyan-200">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/map.png"
+          alt="Map illustration"
+          fill
+          className="object-cover"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
     </div>
   );
 }
+
+const Hero = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+      <div className="relative h-screen col-span-2">
+        <Image
+          src="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Car wash hero image"
+          priority
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center" />
+      </div>
+      <div className="flex flex-col justify-center col-span-1 overflow-hidden">
+        <motion.h1
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, type: "tween", stiffness: 200 }}
+          className="text-xl md:text-3xl font-mono font-bold uppercase"
+        >
+          Fast,Fun,Flawless:
+        </motion.h1>
+        <motion.h2
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7, type: "tween", stiffness: 300 }}
+          className="text-2xl text-yellow-500 uppercase"
+        >
+          Spade Car Wash!
+        </motion.h2>
+
+        <motion.p
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, type: "tween", stiffness: 400 }}
+          className="mt-5 text-gray-500"
+        >
+          At Spade Car Wash, we protect one of your most treasured possessions:
+          your vehicle. After each Spade Wash, experience the pride of ownership
+          as you did the day you took your vehicle off the lot!
+        </motion.p>
+      </div>
+    </div>
+  );
+};
