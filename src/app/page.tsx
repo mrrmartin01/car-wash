@@ -7,11 +7,14 @@ import {
   IconCrown,
   IconLockOpen,
   IconMoneybagHeart,
+  IconSpade,
   IconThumbUpFilled,
   IconWaveSine,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import SpadeCarWashLogo from "@/components/spadelogo";
+import AboutCard from "./aboutCard";
 
 export default function Home() {
   return (
@@ -53,7 +56,7 @@ export default function Home() {
               <div
                 className={cn(
                   "flex h-16 w-16 items-center justify-center rounded-full shrink-0",
-                  index % 2 !== 0 ? "bg-purple-500" : "bg-cyan-500"
+                  index % 2 !== 0 ? "bg-yellow-500" : "bg-cyan-500"
                 )}
               >
                 <Icon className="h-7 w-7" />
@@ -96,7 +99,7 @@ export default function Home() {
               <div
                 className={cn(
                   "flex h-16 w-16 items-center justify-center rounded-full shrink-0",
-                  index % 2 === 0 ? "bg-purple-500" : "bg-cyan-500"
+                  index % 2 === 0 ? "bg-yellow-500" : "bg-cyan-500"
                 )}
               >
                 <Icon className="h-7 w-7" />
@@ -118,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative mt-24 w-full h-32 md:h-52 overflow-hidden bg-cyan-200">
+      <section className="relative mt-24 w-full h-32 md:h-80 overflow-hidden bg-cyan-200">
         <Image
           src="/map.png"
           alt="Map illustration"
@@ -126,6 +129,115 @@ export default function Home() {
           className="object-cover"
           priority
         />
+        <div className="absolute inset-0 bg-black/30" />
+      </section>
+
+      <section className="mt-24 w-[95%] max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="text-left space-y-2">
+            <motion.h1
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, type: "tween", stiffness: 200 }}
+              className="text-xl md:text-3xl font-sans font-bold uppercase"
+            >
+              About Spade Car Wash
+            </motion.h1>
+            <motion.h2
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7, type: "tween", stiffness: 300 }}
+              className="text-lg md:text-xl text-yellow-500 font-mono uppercase"
+            >
+              YOUR LOCAL CAR WASH EXPERTS!
+            </motion.h2>
+            <motion.p
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, type: "tween", stiffness: 400 }}
+              className="mt-5 text-gray-400 font-mono"
+            >
+              Welcome to Spade Car Wash—where we're crazy about cleanliness and
+              serious about shine! Conveniently scattered throughout your area,
+              finding a Spade Car Wash is as easy as spotting rainbows after a
+              storm. We're your number one stop for a ride that gleams and
+              beams. Whether you need a quick splash or the complete armor
+              protection treatment, our modern facilities and top quality ensure
+              your vehicle dazzles on departure—every single time.
+            </motion.p>
+          </div>
+          <div className="flex flex-col items-start justify-center text-left max-w-sm p-5  mx-auto space-y-4 bg-gradient-to-b rounded-t-3xl from-cyan-950 to-transparent">
+            <h2 className="text-lg md:text-xl underline-offset-2 decoration-wavy underline">
+              Find a Location
+            </h2>
+            <span className="leading-tight text-sm text-gray-300">
+              We&apos;re always in the hood, with many convenient new locations.
+              Find your nearest Spade Car Wash here!
+            </span>
+            <div className="mt-2">
+              <a
+                href="/location"
+                className="bg-yellow-500 font-semibold px-4 py-2 rounded-md shadow-md shadow-gray-500 text-gray-50 hover:text-yellow-500 hover:bg-gray-50 transition-colors duration-700"
+              >
+                View all locations
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-[5%]">
+        <SpadeCarWashLogo />
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl m-auto ">
+          <h1 className="text-xl md:text-7xl tracking-tighter ">
+            Why Choose{" "}
+            <span className="text-yellow-500 font-sans">Spade Car Wash?</span>
+          </h1>
+          <div className="relative ">
+            <Image
+              src="/about.png"
+              alt="Car wash hero image"
+              fill
+              loading="lazy"
+              className="object-cover rounded-l-full"
+            />
+            <div className="absolute inset-0 backdrop-hue-rotate-90" />
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-[10%]">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 w-full max-w-7xl m-auto">
+          {[
+            {
+              imgSrc: "/about.png",
+              title: "Conveniently Close",
+              desc: "We're just around the corner, making clean cars a breeze.",
+            },
+            {
+              imgSrc: "/about.png",
+              title: "Expert Care",
+              desc: "Each car gets the royal treatment because we're obsessed with details.",
+            },
+            {
+              imgSrc: "/about.png",
+              title: "Eco-Friendly",
+              desc: "Our nifty Water Reclaim System recycles water, slashing our eco-footprint and saving the planet, one car wash at a time!",
+            },
+            {
+              imgSrc: "/about.png",
+              title: "Community Cheers",
+              desc: "We're part of your local scene, actively enriching our shared home.",
+            },
+          ].map(({ imgSrc, title, desc }, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-6 rounded-2xl shadow-sm transition hover:shadow-lg"
+            >
+              <AboutCard imgSrc={imgSrc} title={title} desc={desc} />
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
