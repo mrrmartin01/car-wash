@@ -190,7 +190,7 @@ export default function Home() {
         <SpadeCarWashLogo />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl m-auto ">
           <h1 className="text-xl md:text-7xl tracking-tighter ">
-            Why Choose{" "}
+            Why Choose <br />
             <span className="text-yellow-500 font-sans">Spade Car Wash?</span>
           </h1>
           <div className="relative ">
@@ -237,6 +237,119 @@ export default function Home() {
               <AboutCard imgSrc={imgSrc} title={title} desc={desc} />
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-16 relative h-screen w-full overflow-hidden">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover saturate-150 sepia-50"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/videos/seaside.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-black/60 to-neutral-950" />
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+          <div className="max-w-sm ">
+            <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-zinc-700 to-white text-4xl md:text-6xl lg:text-7xl font-bold mix-blend-difference text-center">
+              Wash Services
+            </h1>
+            <p className="mt-6 text-md md:text-lg text-gray-300 leading-tight">
+              Spade Car Wash makes your car wash experience better for your
+              vehicle and the environment by championing the newest technology
+              and services in the industry.
+            </p>
+            <div className="mt-6">
+              <Link
+                href={"/purchase-membership"}
+                className="px-6 py-3 text-lg bg-yellow-500 hover:bg-yellow-700 transform-color duration-500 rounded-2xl"
+              >
+                Puchase a membership
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 ">
+          <div className="relative h-screen">
+            <Image
+              src="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Car wash hero image"
+              priority
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 to-transparent" />
+          </div>
+          <div className="flex flex-col justify-center overflow-hidden">
+            <motion.h2
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7, type: "tween", stiffness: 300 }}
+              className="text-xl md:text-6xl tracking-tighter text-yellow-500 uppercase"
+            >
+              Spade Car Wash
+            </motion.h2>
+            <motion.h1
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, type: "tween", stiffness: 200 }}
+              className="w-full max-w-sm text-xl md:text-3xl font-mono font-bold uppercase"
+            >
+              is home to your car wash professionals
+            </motion.h1>
+
+            <motion.p
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, type: "tween", stiffness: 400 }}
+              className="w-full max-w-lg mt-5 text-lg md:text-xl text-gray-500"
+            >
+              Spade Car Wash delivers superior washes performed by a caring team
+              of people who appreciate the value of your time. We adhere to the
+              highest standards of our industry, using only environmentally
+              friendly products. To offer this level of consistent service, each
+              of our car wash professionals is committed to ongoing training.
+              Our commitment to continual learning ensures that Spade Car Wash
+              customers in each of our markets enjoy best-of-industry standards
+              and practices. If this sounds like the level of care and service
+              that you&apos;d like to experience at your car wash, then visit
+              today and join the Spade Car Wash family!
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="my-[5%]">
+        <div className="flex flex-col items-center justify-center py-10 ">
+          <h1 className="text-lg md:text-4xl tracking-tighter text-yellow-500 uppercase">
+            Find A Go Location
+          </h1>
+          <h2 className="max-w-xl md:text-xl font-mono font-bold uppercase">
+            We&apos;re always on the GO, with many convenient new locations.
+            Find your nearest GO Car Wash here!
+          </h2>
+          <div className="w-full max-w-2xl">
+            <div className="relative">
+              <input
+                type="search"
+                name="seach"
+                id=""
+                className="absolute w-full h-12 bg-transparent border border-gray-700 p-3 rounded-2xl"
+              />
+              <button
+                type="submit"
+                className="absolute inset-0 top-0 left-0 w-1/5 h-12 bg-red-500"
+              >
+                Search
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
