@@ -121,15 +121,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative mt-24 w-full h-32 md:h-80 overflow-hidden bg-cyan-200">
+      <section className="relative mt-24 w-full h-32 md:h-[80vh] overflow-hidden bg-cyan-200">
         <Image
-          src="/map.png"
+          src="https://images.unsplash.com/photo-1506719040632-7d586470c936?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzdCUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D"
           alt="Map illustration"
           fill
-          className="object-cover"
+          className="object-cover hue-rotate-30"
           priority
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-black/60 to-neutral-950" />
       </section>
 
       <section className="mt-24 w-[95%] max-w-5xl mx-auto">
@@ -210,22 +210,26 @@ export default function Home() {
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 w-full max-w-7xl m-auto">
           {[
             {
-              imgSrc: "/about.png",
+              imgSrc:
+                "https://images.unsplash.com/photo-1753183700294-a2dbeb81e168?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNsb3NlfGVufDB8fDB8fHww",
               title: "Conveniently Close",
               desc: "We're just around the corner, making clean cars a breeze.",
             },
             {
-              imgSrc: "/about.png",
+              imgSrc:
+                "https://plus.unsplash.com/premium_photo-1720767867216-6e91cce51244?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2OXx8fGVufDB8fHx8fA%3D%3D",
               title: "Expert Care",
               desc: "Each car gets the royal treatment because we're obsessed with details.",
             },
             {
-              imgSrc: "/about.png",
+              imgSrc:
+                "https://images.unsplash.com/photo-1753295640202-bd76e1b82afa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2OHx8fGVufDB8fHx8fA%3D%3D",
               title: "Eco-Friendly",
               desc: "Our nifty Water Reclaim System recycles water, slashing our eco-footprint and saving the planet, one car wash at a time!",
             },
             {
-              imgSrc: "/about.png",
+              imgSrc:
+                "https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tbXVuaXR5fGVufDB8fDB8fHww",
               title: "Community Cheers",
               desc: "We're part of your local scene, actively enriching our shared home.",
             },
@@ -326,29 +330,30 @@ export default function Home() {
       </section>
 
       <section className="my-[5%]">
-        <div className="flex flex-col items-center justify-center py-10 ">
-          <h1 className="text-lg md:text-4xl tracking-tighter text-yellow-500 uppercase">
-            Find A Go Location
+        <div className="flex flex-col items-center justify-center text-center py-10 ">
+          <h1 className="text-lg md:text-4xl tracking-tighter font-mono text-yellow-500 uppercase">
+            Find A Spade Location
           </h1>
-          <h2 className="max-w-xl md:text-xl font-mono font-bold uppercase">
-            We&apos;re always on the GO, with many convenient new locations.
-            Find your nearest GO Car Wash here!
+          <h2 className="max-w-xl md:text-xl font-sans py-4">
+            We&apos;re always around the hood, with many convenient new
+            locations. Find your nearest Spade Car Wash here!
           </h2>
           <div className="w-full max-w-2xl">
-            <div className="relative">
+            <form className="relative flex items-center">
               <input
                 type="search"
-                name="seach"
-                id=""
-                className="absolute w-full h-12 bg-transparent border border-gray-700 p-3 rounded-2xl"
+                name="search"
+                id="search"
+                placeholder="Search..."
+                className="w-full h-12 rounded-full pl-5 pr-28 bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-sm"
               />
               <button
                 type="submit"
-                className="absolute inset-0 top-0 left-0 w-1/5 h-12 bg-red-500"
+                className="font-semibold absolute right-2 top-1/2 -translate-y-1/2 h-10 px-6 rounded-full bg-gradient-to-r from-yellow-500 to-neutral-300 text-gray-900 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 Search
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -358,46 +363,50 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-      <div className="relative h-screen col-span-2">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
+      {/* Hero Image */}
+      <div className="relative w-full h-[60vh] md:h-screen md:col-span-2">
         <Image
-          src="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/hero.webp"
           alt="Car wash hero image"
           priority
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center" />
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
       </div>
-      <div className="flex flex-col justify-center col-span-1 overflow-hidden">
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex flex-col justify-center px-6 sm:px-10 md:px-6 lg:px-10 py-12 md:py-0">
         <motion.h1
-          initial={{ x: 30, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, type: "tween", stiffness: 200 }}
-          className="text-xl md:text-3xl font-mono font-bold uppercase"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white"
         >
-          Fast,Fun,Flawless:
+          Fast, Fun, Flawless
         </motion.h1>
+
         <motion.h2
-          initial={{ x: 30, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7, type: "tween", stiffness: 300 }}
-          className="text-2xl text-yellow-500 uppercase"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400"
         >
-          Spade Car Wash!
+          Spade Car Wash
         </motion.h2>
 
         <motion.p
-          initial={{ x: 30, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, type: "tween", stiffness: 400 }}
-          className="mt-5 text-gray-500"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+          className="mt-6 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-md"
         >
-          At Spade Car Wash, we protect one of your most treasured possessions:
-          your vehicle. After each Spade Wash, experience the pride of ownership
-          as you did the day you took your vehicle off the lot!
+          At Spade Car Wash, we protect one of your most treasured possessions:{" "}
+          your vehicle. After each wash, experience the pride of ownership like
+          the day you drove it off the lot.
         </motion.p>
       </div>
-    </div>
+    </section>
   );
 };
