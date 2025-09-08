@@ -1,4 +1,5 @@
 import React from "react";
+import Services from "./services";
 
 const ServicesPage = () => {
   return (
@@ -25,10 +26,16 @@ const ServicesPage = () => {
         </h2>
       </div>
 
+      <section>
+        <Services />
+      </section>
+
+      
       <section className="mt-20">
         <div className="flex md:flex-row flex-col items-center justify-center text-center py-10 ">
           <h2 className="max-w-sm md:text-lg font-sans py-4 text-left text-gray-400">
-           FInd as down the block to keep your car squicky clean. They say we&apos;re popular than Uber in the hood
+            FInd as down the block to keep your car squicky clean. They say
+            we&apos;re popular than Uber in the hood
           </h2>
           <div className="w-full max-w-4xl flex-1">
             <form className="relative flex items-center">
