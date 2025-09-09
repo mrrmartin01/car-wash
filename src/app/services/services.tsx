@@ -102,6 +102,7 @@ const ServiceCard = ({
         <Image
           src={imgSrc}
           alt={title}
+          loading="lazy"
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
