@@ -13,7 +13,7 @@ const AboutCard = ({ imgSrc, title, desc }: AboutCardTypes) => {
       className="flex flex-col items-center text-center pt-14 
       h-[400px] w-3xs space-y-3 bg-gradient-to-b from-pink-500 
     via-blue-950 to-transparent hover:bg-conic-330 hue-rotate-90 rounded-2xl
-    transition-color duration-700"
+    transition-colors duration-1000"
     >
       <div className="relative h-32 w-32 rounded-full bg-cyan-500">
         <Image

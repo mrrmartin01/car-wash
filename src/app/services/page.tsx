@@ -20,8 +20,8 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <div className="h-16 w-full flex items-center justify-center from-cyan-900 via-blue-950 to-transparent bg-conic-330 hue-rotate-90">
-        <h2 className="text-center text-lg md:text-xl font-thin tracking-wide font-mono uppercase">
+      <div className="mt-5 h-16 w-full flex items-center justify-center from-cyan-900 via-blue-950 to-neutral-900 bg-conic-330 ">
+        <h2 className="text-center text-lg md:text-xl font-thin tracking-wide mono uppercase">
           Come Ace your Car with Spade Car Wash
         </h2>
       </div>

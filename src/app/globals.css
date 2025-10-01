@@ -25,3 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: inherit;
 }
+
+.mono {
+  font-family: var(--font-geist-mono), monospace;
+}
