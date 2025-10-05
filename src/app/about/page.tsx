@@ -5,15 +5,15 @@ import React from "react";
 const AboutPage = () => {
   return (
     <main className="min-h-screen">
-      <section className="mt-16 relative h-screen w-full overflow-hidden">
+      <section className="mt-16 relative h-[70dvh] w-full overflow-hidden">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover saturate-150 sepia-50"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
           loop
           muted
           playsInline
         >
-          <source src="/videos/seaside.mp4" type="video/mp4" />
+          <source src="/seaside.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-black/60 to-neutral-950" />
 
@@ -28,12 +28,12 @@ const AboutPage = () => {
               and services in the industry.
             </p>
             <div className="mt-6">
-              <a
+              <Link
                 href={"#about"}
                 className="px-6 py-3 text-lg bg-yellow-500 hover:bg-yellow-700 transform-color duration-500 rounded-2xl"
               >
                 View more
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const AboutPage = () => {
         className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
       >
         {/* Text Content */}
-        <div className="text-gray-400">
+        <div className="text-gray-200">
           <h2 className="text-3xl md:text-4xl font-semibold text-yellow-500 mb-6">
             Who We Are
           </h2>
@@ -81,7 +81,7 @@ const AboutPage = () => {
             <h3 className="text-xl font-semibold text-yellow-500 mb-3">
               Our Mission
             </h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-100 text-sm leading-relaxed">
               To deliver the best car wash experience with quality, convenience,
               and care at the heart of everything we do.
             </p>
@@ -90,7 +90,7 @@ const AboutPage = () => {
             <h3 className="text-xl font-semibold text-yellow-500 mb-3">
               Eco-Friendly
             </h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-100 text-sm leading-relaxed">
               We use water-saving techniques and biodegradable products to
               protect your car and the environment.
             </p>
@@ -99,7 +99,7 @@ const AboutPage = () => {
             <h3 className="text-xl font-semibold text-yellow-500 mb-3">
               Customer First
             </h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-100 text-sm leading-relaxed">
               Your satisfaction is our priority. We aim to make every visit
               simple, fast, and enjoyable.
             </p>
