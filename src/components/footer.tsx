@@ -5,6 +5,7 @@ const footerLinks = {
     { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
+    { label: "Membership", href: "/purchase-membership" },
   ],
   expertise: [
     { label: "Exterior Wash", href: "/services/#exterior-wash" },

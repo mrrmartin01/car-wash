@@ -64,11 +64,12 @@ const AboutPage = () => {
         </div>
 
         {/* Image Content */}
-        <div className="relative w-full h-72 md:h-[40rem] rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-full h-96 md:h-[40rem] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="https://images.unsplash.com/photo-1647604466973-7ff5f4b82dec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJsYWNrJTIwUG9ydHJhaXR8ZW58MHx8MHx8fDA%3D"
+            src="https://images.unsplash.com/photo-1586232880922-25f9b9695ecb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGJsYWNrJTIwZXhlY3V0aXZlc3xlbnwwfHwwfHx8MA%3D%3D"
             alt="Professional car wash team"
             fill
+            quality={100}
             className="object-cover"
           />
         </div>

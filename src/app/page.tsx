@@ -7,7 +7,6 @@ import {
   IconCrown,
   IconLockOpen,
   IconMoneybagHeart,
-  IconSpade,
   IconThumbUpFilled,
   IconWaveSine,
 } from "@tabler/icons-react";
@@ -21,11 +20,11 @@ export default function Home() {
     <div className="">
       <Hero />
 
-      <section className="mt-20 mx-auto max-w-6xl w-full  text-center">
-        <h1 className="text-3xl font-bold font-mono text-slate-300">
+      <section className="px-6 sm:px-10 md:px-6 lg:px-10 py-12 md:py-0 mt-20 mx-auto max-w-6xl w-full  text-center">
+        <h1 className="text-lg md:text-3xl font-bold font-mono text-slate-300">
           Keep Your Car Shiny, All The Time!
         </h1>
-        <h2 className="mt-2 text-lg font-sans text-gray-500">
+        <h2 className="mt-2 text-xs md:text-lg font-sans text-gray-500">
           Wash As Many Times As You Like At Any of Our Spade Car Wash Locations,
           Nationwide.
         </h2>
@@ -55,11 +54,11 @@ export default function Home() {
             >
               <div
                 className={cn(
-                  "flex h-16 w-16 items-center justify-center rounded-full shrink-0",
-                  index % 2 !== 0 ? "bg-yellow-500" : "bg-cyan-500"
+                  "flex h-10 md:h-16 w-10 md:w-16 items-center justify-center rounded-full shrink-0",
+                  index % 2 !== 0 ? "bg-yellow-500" : "bg-yellow-800/30 border border-yellow-500 text-yellow-500"
                 )}
               >
-                <Icon className="h-7 w-7" />
+                <Icon className="h-5 md:h-7 w-5 md:w-7" />
               </div>
               <div className="flex flex-col text-left">
                 <h3 className="text-lg font-semibold text-gray-400">{title}</h3>
@@ -98,11 +97,11 @@ export default function Home() {
             >
               <div
                 className={cn(
-                  "flex h-16 w-16 items-center justify-center rounded-full shrink-0",
-                  index % 2 === 0 ? "bg-yellow-500" : "bg-cyan-500"
+                  "flex h-10 md:h-16 w-10 md:w-16 items-center justify-center rounded-full shrink-0",
+                  index % 2 === 0 ? "bg-yellow-500" : "bg-yellow-800/30 border border-yellow-500 text-yellow-500"
                 )}
               >
-                <Icon className="h-7 w-7" />
+                <Icon className="h-5 md:h-7 w-5 md:w-7" />
               </div>
               <div className="flex flex-col text-left">
                 <h3 className="text-lg font-semibold text-gray-400">{title}</h3>
@@ -114,14 +113,14 @@ export default function Home() {
         <div className="mt-16">
           <Link
             href={"/purchase-membership"}
-            className="px-4 py-2 text-lg bg-yellow-500 hover:bg-yellow-700 transform-color duration-500 rounded-2xl"
+            className="text-gray-700 px-4 py-2 text-lg bg-yellow-500 hover:bg-yellow-300 transform-color duration-500 rounded-2xl"
           >
             Puchase a membership
           </Link>
         </div>
       </section>
 
-      <section className="relative mt-24 w-full h-32 md:h-[80vh] overflow-hidden bg-cyan-200">
+      <section className="relative mt-24 w-full h-64 md:h-[80vh] overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1506719040632-7d586470c936?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzdCUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D"
           alt="Map illustration"
@@ -132,7 +131,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-black/60 to-neutral-950" />
       </section>
 
-      <section className="mt-24 w-[95%] max-w-5xl mx-auto">
+      <section className="px-6 sm:px-10 md:px-6 lg:px-10 py-12 md:py-0 mt-24 w-[95%] max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="text-left space-y-2">
             <motion.h1
@@ -166,18 +165,18 @@ export default function Home() {
               your vehicle dazzles on departure—every single time.
             </motion.p>
           </div>
-          <div className="flex flex-col items-start justify-center text-left max-w-sm p-5  mx-auto space-y-4 bg-gradient-to-b rounded-t-3xl from-cyan-950 to-transparent">
-            <h2 className="text-lg md:text-xl underline-offset-2 decoration-wavy underline">
+          <div className="flex flex-col items-start justify-center text-left max-w-sm p-5 mt-10 md:mt-0 mx-auto space-y-4 bg-gradient-to-b rounded-t-3xl border border-b-0 border-yellow-500 from-yellow-800/20 to-transparent">
+            <h2 className="text-lg md:text-xl text-yellow-500 underline-offset-2 decoration-wavy underline">
               Find a Location
             </h2>
-            <span className="leading-tight text-sm text-gray-300">
+            <span className="leading-tight text-sm text-gray-400">
               We&apos;re always in the hood, with many convenient new locations.
               Find your nearest Spade Car Wash here!
             </span>
             <div className="mt-2">
               <a
                 href="/location"
-                className="bg-yellow-500 font-semibold px-4 py-2 rounded-md shadow-md shadow-gray-500 text-gray-50 hover:text-yellow-500 hover:bg-gray-50 transition-colors duration-700"
+                className="bg-yellow-500 px-4 py-2 rounded-md shadow-md shadow-yellow-800 text-gray-50 hover:text-yellow-500 hover:bg-yellow-800/20 hover:border hover:border-yellow-500 transition-colors duration-700"
               >
                 View all locations
               </a>
@@ -188,26 +187,26 @@ export default function Home() {
 
       <section className="mt-[5%]">
         <SpadeCarWashLogo />
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl m-auto ">
-          <h1 className="text-xl md:text-7xl tracking-tighter ">
+        <div className="px-6 sm:px-10 md:px-6 lg:px-10 mt-10 grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full max-w-6xl m-auto ">
+          <h1 className="text-2xl md:text-7xl tracking-tighter ">
             Why Choose <br />
             <span className="text-yellow-500 font-sans">Spade Car Wash?</span>
           </h1>
-          <div className="relative ">
+          <div className="relative h-32 md:h-[30vh] w-full overflow-hidden">
             <Image
               src="/about.png"
               alt="Car wash hero image"
               fill
               loading="lazy"
-              className="object-cover rounded-l-full"
+              className="object-cover "
             />
-            <div className="absolute inset-0 backdrop-hue-rotate-90" />
+            <div className="absolute inset-0 backdrop-hue-rotate-90 border-l-2 border-yellow-500" />
           </div>
         </div>
       </section>
 
-      <section className="mt-[10%]">
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 w-full max-w-7xl m-auto">
+      <section className="px-6 sm:px-10 md:px-6 lg:px-10 md:py-0 mt-[10%]">
+        <div className="mt-10 grid gap-16 sm:grid-cols-2 lg:grid-cols-4 w-full max-w-7xl m-auto">
           {[
             {
               imgSrc:
@@ -236,7 +235,7 @@ export default function Home() {
           ].map(({ imgSrc, title, desc }, index) => (
             <div
               key={index}
-              className="flex items-start gap-6 rounded-2xl shadow-sm transition hover:shadow-lg"
+              className="flex items-center justify-center gap-6 rounded-2xl shadow-sm transition hover:shadow-lg"
             >
               <AboutCard imgSrc={imgSrc} title={title} desc={desc} />
             </div>
@@ -280,7 +279,7 @@ export default function Home() {
 
       <section className="mt-16">
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 ">
-          <div className="relative h-screen">
+          <div className="relative h-[50dvh] md:h-screen w-full overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Car wash hero image"
@@ -290,7 +289,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 to-transparent" />
           </div>
-          <div className="flex flex-col justify-center overflow-hidden">
+          <div className="flex flex-col justify-center overflow-hidden px-6 sm:px-10 md:px-6 lg:px-10 py-12 md:py-0 text-left">
             <motion.h2
               initial={{ x: 30, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -329,7 +328,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-[5%]">
+      <section className="m-[5%]">
         <div className="flex flex-col items-center justify-center text-center py-10 ">
           <h1 className="text-lg md:text-4xl tracking-tighter font-mono text-yellow-500 uppercase">
             Find A Spade Location

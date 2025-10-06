@@ -18,6 +18,7 @@ const Navbar = () => {
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
+    { name: "Membership", href: "/purchase-membership" },
   ];
 
   return (
@@ -38,12 +39,12 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-6">
+        <ul className="hidden md:flex gap-1">
           {NavLinks.map((link) => (
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-300 rounded-full hover:text-white hover:bg-gradient-to-r hover:from-yellow-500/80 hover:to-yellow-700/80 transition-all duration-200"
+                className="px-3 py-1 text-sm font-medium text-gray-300 rounded-full hover:text-white hover:bg-gradient-to-r hover:from-yellow-500/80 hover:to-yellow-700/80 transition-all duration-200"
               >
                 {link.name}
               </Link>
@@ -65,7 +66,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "absolute left-1/2 top-[4.5rem] w-[90%] max-w-sm -translate-x-1/2 rounded-2xl bg-black/70 backdrop-blur-xl border border-neutral-700 shadow-lg transform transition-all duration-300",
+          "absolute left-1/2 top-[4.5rem] w-[90%] max-w-sm -translate-x-1/2 rounded-2xl bg-black border border-neutral-700 shadow-lg transform transition-all duration-300",
           open
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"

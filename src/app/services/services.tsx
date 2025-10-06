@@ -118,10 +118,10 @@ const ServiceCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-700 bg-white"
+      className="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-700 bg-yellow-500"
     >
       {/* Animated border */}
-      <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-blue-500/50 transition-colors duration-500" />
+      <div className="absolute z-10 inset-0 rounded-3xl border-1 border-transparent group-hover:border-yellow-500/50 transition-colors duration-500" />
 
       <div className={`relative w-full ${height} overflow-hidden`}>
         <Image
@@ -137,7 +137,7 @@ const ServiceCard = ({
         <div className="absolute bottom-0 left-0 p-6 text-white">
           <h3 className="text-2xl font-bold mb-3 tracking-wide relative inline-block">
             {title}
-            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 group-hover:w-full transition-all duration-500" />
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 group-hover:w-full transition-all duration-500" />
           </h3>
           <p className="text-sm opacity-90 leading-relaxed max-w-sm">
             {description}

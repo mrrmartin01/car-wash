@@ -7,21 +7,21 @@ const ServicesPage = () => {
       <section className="grid grid-col-1 md:grid-cols-3 gap-5 w-full max-w-7xl mx-auto items-center">
         <div className="flex flex-col gap-2 w-full">
           <div className="w-full h-[3px] bg-yellow-500" />
-          <div className="w-full h-px bg-cyan-500" />
+          <div className="w-full h-px bg-gray-500" />
           <div className="w-full h-[3px] bg-yellow-500" />
         </div>
-        <h1 className="bg-clip-text font-sans text-transparent bg-gradient-to-t from-cyan-500 to-white text-xl md:text-[30px] lg:text-[40px] text-center">
+        <h1 className="bg-clip-text font-sans text-transparent bg-gradient-to-t from-yellow-500 to-white text-3xl md:text-[30px] lg:text-[40px] text-center">
           Spade Wash Services
         </h1>
         <div className="flex flex-col gap-2 w-full">
           <div className="w-full h-[3px] bg-yellow-500" />
-          <div className="w-full h-px bg-cyan-500" />
+          <div className="w-full h-px bg-gray-500" />
           <div className="w-full h-[3px] bg-yellow-500" />
         </div>
       </section>
 
-      <div className="mt-5 h-16 w-full flex items-center justify-center from-cyan-900 via-blue-950 to-neutral-900 bg-conic-330 ">
-        <h2 className="text-center text-lg md:text-xl font-thin tracking-wide mono uppercase">
+      <div className="mt-5 h-16 w-full flex items-center justify-center border-y border-yellow-600 from-yellow-600/50 via-yellow-950/50 to-yellow-900/50 bg-conic-330 ">
+        <h2 className="text-center text-amber-500 text-lg md:text-xl  tracking-wide mono uppercase">
           Come Ace your Car with Spade Car Wash
         </h2>
       </div>
@@ -30,8 +30,7 @@ const ServicesPage = () => {
         <Services />
       </section>
 
-      
-      <section className="mt-20">
+      <section className="mt-20 m-[5%]">
         <div className="flex md:flex-row flex-col items-center justify-center text-center py-10 ">
           <h2 className="max-w-sm md:text-lg font-sans py-4 text-left text-gray-400">
             FInd as down the block to keep your car squicky clean. They say
