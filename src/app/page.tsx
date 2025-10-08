@@ -55,7 +55,9 @@ export default function Home() {
               <div
                 className={cn(
                   "flex h-10 md:h-16 w-10 md:w-16 items-center justify-center rounded-full shrink-0",
-                  index % 2 !== 0 ? "bg-yellow-500" : "bg-yellow-800/30 border border-yellow-500 text-yellow-500"
+                  index % 2 !== 0
+                    ? "bg-yellow-500"
+                    : "bg-yellow-800/30 border border-yellow-500 text-yellow-500"
                 )}
               >
                 <Icon className="h-5 md:h-7 w-5 md:w-7" />
@@ -98,7 +100,9 @@ export default function Home() {
               <div
                 className={cn(
                   "flex h-10 md:h-16 w-10 md:w-16 items-center justify-center rounded-full shrink-0",
-                  index % 2 === 0 ? "bg-yellow-500" : "bg-yellow-800/30 border border-yellow-500 text-yellow-500"
+                  index % 2 === 0
+                    ? "bg-yellow-500"
+                    : "bg-yellow-800/30 border border-yellow-500 text-yellow-500"
                 )}
               >
                 <Icon className="h-5 md:h-7 w-5 md:w-7" />
@@ -337,23 +341,12 @@ export default function Home() {
             We&apos;re always around the hood, with many convenient new
             locations. Find your nearest Spade Car Wash here!
           </h2>
-          <div className="w-full max-w-2xl">
-            <form className="relative flex items-center">
-              <input
-                type="search"
-                name="search"
-                id="search"
-                placeholder="Search..."
-                className="w-full h-12 rounded-full pl-5 pr-28 bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-sm"
-              />
-              <button
-                type="submit"
-                className="font-semibold absolute right-2 top-1/2 -translate-y-1/2 h-10 px-6 rounded-full bg-gradient-to-r from-yellow-500 to-neutral-300 text-gray-900 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                Search
-              </button>
-            </form>
-          </div>
+          <a
+            href="/location"
+            className="border border-yellow-500 bg-amber-800/30 text-yellow-500 hover:bg-amber-900/80 hover:text-yellow-300 h-auto font-semibold py-2 px-6 rounded-full transition-all duration-300"
+          >
+            Search Locations
+          </a>
         </div>
       </section>
     </div>
